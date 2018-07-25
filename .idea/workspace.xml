@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="402343b5-bc3d-4eb6-abc0-f8a3c16565a7" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Node.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/AdjacentPointsMinDistance.java" afterPath="$PROJECT_DIR$/src/AdjacentPointsMinDistance.java" />
       <change beforePath="$PROJECT_DIR$/src/MaxSumDistance.java" afterPath="$PROJECT_DIR$/src/MaxSumDistance.java" />
       <change beforePath="$PROJECT_DIR$/src/ModuleShopping.java" afterPath="$PROJECT_DIR$/src/ModuleShopping.java" />
+      <change beforePath="$PROJECT_DIR$/src/Node.java" afterPath="$PROJECT_DIR$/src/Node.java" />
       <change beforePath="$PROJECT_DIR$/src/Times3Bitcount.java" afterPath="$PROJECT_DIR$/src/Times3Bitcount.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />

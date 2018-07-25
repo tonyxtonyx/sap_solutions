@@ -1,6 +1,6 @@
 public class ModuleShopping {
     private Node root;
-    public Tree(){
+    public ModuleShopping(){
         root = null;
     }
 
