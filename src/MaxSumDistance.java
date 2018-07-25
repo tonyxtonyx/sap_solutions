@@ -1,7 +1,7 @@
 public class MaxSumDistance {
 
 
-    public int solution(int[] ints) {
+    public static int solution(int[] ints) {
 
         int first = 0, second = 0;
 

@@ -104,6 +104,19 @@ public class ModuleShopping {
                 else
                     parent.rightChild = current.leftChild;
             }
+            else if(current.leftChild == null){
+                if(current == root)
+                    root = null;
+
+                else if(isLeftChild)
+                    parent.leftChild = current.rightChild;
+
+                else
+                    parent.rightChild = current.rightChild;
+            }
+            else {
+
+            }
 
         }
     }
