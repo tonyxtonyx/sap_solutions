@@ -14,7 +14,7 @@ public class AdjacentPointsMinDistance {
         }
 
 
-        return(difference);
+        return difference >= 100000000 ? -1 : difference;
     }
 
     public  void merge(int[] ints, int start, int midpoint, int end)

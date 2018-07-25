@@ -8,6 +8,7 @@ public class ModuleShopping {
         if(find_product(product_code) != null){
             return;
         }
+
         Product product = new Product(product_code,product_name,product_price);
         Link newLink = new Link(product);
         newLink.next = first;
