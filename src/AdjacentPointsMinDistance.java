@@ -17,7 +17,7 @@ public class AdjacentPointsMinDistance {
         return(difference);
     }
 
-    public void merge(int[] ints, int start, int midpoint, int end)
+    public  void merge(int[] ints, int start, int midpoint, int end)
     {
         int n1 = midpoint - start + 1;
         int n2 = end - midpoint;
@@ -70,7 +70,7 @@ public class AdjacentPointsMinDistance {
     }
 
 
-    void sort(int[] ints, int start, int end)
+    void  sort(int[] ints, int start, int end)
     {
         if (start < end)
         {

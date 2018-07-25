@@ -7,13 +7,15 @@ public class Times3Bitcount {
             s += Math.pow(2,ints[i]);
         }
 
-        String[] three_n = Integer.toString(3*s,2).split("");
+        s = s*3;
 
-        for (String i:
-                three_n) {
-            if(i.equals("1")){
+        while(s > 0){
+            int ostatok = s % 2;
+            System.out.println(s);
+            if(ostatok == 1)
                 counter += 1;
-            }
+            s -= ostatok;
+            s = s/2;
         }
         return counter;
     }
