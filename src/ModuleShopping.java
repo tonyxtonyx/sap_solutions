@@ -5,13 +5,18 @@ public class ModuleShopping {
     }
 
     public void insert_product(int product_code, String product_name, int product_price){
+        if(find_product(product_code) != null){
+            return;
+        }
         Product product = new Product(product_code,product_name,product_price);
-        Link newLink = new Link();
-        newLink.product = product;
+        Link newLink = new Link(product);
         newLink.next = first;
         first = newLink;
     }
     public Product find_product(int product_code){
+        if(first == null){
+            return null;
+        }
         Link current = first;
         while(current.product.product_code != product_code){
             if(current.next == null)
@@ -49,11 +54,10 @@ public class ModuleShopping {
                 previous = current;
                 current = current.next;
             }
-            if (current == first)
-                first = first.next;
-            else
-                previous.next = current.next;
-
         }
+        if (current == first)
+            first = first.next;
+        else
+            previous.next = current.next;
     }
 }

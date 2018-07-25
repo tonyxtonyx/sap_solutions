@@ -11,8 +11,10 @@ public class Main {
 
         moduleShopping.remove_product(25);
 
-        System.out.println(moduleShopping.get_product_price(26));
-
+        System.out.println(moduleShopping.get_product_price(25));
+        System.out.println(moduleShopping.get_product_name(80));
+        moduleShopping.insert_product(95,"test324",24);
+        System.out.println(moduleShopping.get_product_name(95));
 
     }
 }
