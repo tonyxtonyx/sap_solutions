@@ -1,11 +1,4 @@
 public class AdjacentPointsMinDistance {
-    public static void main(String[] args) {
-
-        int[] ints = {0};
-
-
-    }
-
     public int solution(int[] ints){
         int difference = 100000000;
 

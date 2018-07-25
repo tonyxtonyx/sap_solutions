@@ -1,9 +1,5 @@
 public class MaxSumDistance {
-    public static void main(String[] args) {
-        int[] ints = {1,9,4,0,0,0,0,10};
 
-
-    }
 
     public int solution(int[] ints) {
 

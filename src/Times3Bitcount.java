@@ -1,7 +1,4 @@
 public class Times3Bitcount {
-    public static void main(String[] args) {
-
-    }
 
     public int solution(int[] ints){
         int counter = 0;
