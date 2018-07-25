@@ -1,55 +1,29 @@
 public class ModuleShopping {
-    private Node root;
+    private Link first;
     public ModuleShopping(){
-        root = null;
+        first = null;
     }
 
     public void insert_product(int product_code, String product_name, int product_price){
-        Product newProduct = new Product(product_code,product_name,product_price);
-        Node newNode = new Node(newProduct);
-        if(root==null)
-            root = newNode;
-        else {
-            Node current = root;
-            Node parent;
-            while (true){
-                parent = current;
-                if(product_code < current.product.product_code){
-                    current = current.leftChild;
-                    if(current == null){
-                        parent.leftChild = newNode;
-                        return;
-                    }
-                }
-                else if (product_code > current.product.product_code) {
-                    current = current.rightChild;
-                    if (current == null) {
-                        parent.rightChild = newNode;
-                        return;
-                    }
-                }
-                else
-                    return;
-            }
-
-        }
+        Product product = new Product(product_code,product_name,product_price);
+        Link newLink = new Link();
+        newLink.product = product;
+        newLink.next = first;
+        first = newLink;
     }
     public Product find_product(int product_code){
-        Node current = root;
-        while (current.product.product_code != product_code){
-            if(product_code < current.product.product_code)
-                current = current.leftChild;
-            else
-                current = current.rightChild;
-            if(current == null)
+        Link current = first;
+        while(current.product.product_code != product_code){
+            if(current.next == null)
                 return null;
+            else
+                current = current.next;
         }
         return current.product;
     }
 
     public int get_product_price(int product_code){
         Product product = find_product(product_code);
-
         if(product == null)
             return -1;
         else
@@ -58,7 +32,6 @@ public class ModuleShopping {
 
     public String get_product_name(int product_code){
         Product product = find_product(product_code);
-
         if(product == null)
             return null;
         else
@@ -66,57 +39,20 @@ public class ModuleShopping {
     }
 
     public void remove_product(int product_code){
-        Node current = root;
-        Node parent = root;
-        boolean isLeftChild = true;
+        Link current = first;
+        Link previous = first;
 
         while (current.product.product_code != product_code){
-            parent = current;
-            if(product_code < current.product.product_code){
-                isLeftChild = true;
-                current = current.leftChild;
-            }
-            else {
-                isLeftChild = false;
-                current = current.rightChild;
-            }
-            if(current == null){
+            if(current.next == null)
                 return;
-            }
-
-            if(current.leftChild == null && current.rightChild == null){
-                if(current == root)
-                    root = null;
-
-                else if(isLeftChild)
-                    parent.leftChild = null;
-
-                else
-                    parent.rightChild = null;
-            }
-            else if(current.rightChild== null){
-                if(current == root)
-                    root = null;
-
-                else if(isLeftChild)
-                    parent.leftChild = current.leftChild;
-
-                else
-                    parent.rightChild = current.leftChild;
-            }
-            else if(current.leftChild == null){
-                if(current == root)
-                    root = null;
-
-                else if(isLeftChild)
-                    parent.leftChild = current.rightChild;
-
-                else
-                    parent.rightChild = current.rightChild;
-            }
             else {
-
+                previous = current;
+                current = current.next;
             }
+            if (current == first)
+                first = first.next;
+            else
+                previous.next = current.next;
 
         }
     }

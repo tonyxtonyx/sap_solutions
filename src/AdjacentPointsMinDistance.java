@@ -23,14 +23,14 @@ public class AdjacentPointsMinDistance {
         int n2 = end - midpoint;
 
 
-        int L[] = new int [n1];
-        int R[] = new int [n2];
+        int[] Left = new int [n1];
+        int[] Right = new int [n2];
 
 
         for (int i=0; i<n1; ++i)
-            L[i] = ints[start + i];
+            Left[i] = ints[start + i];
         for (int j=0; j<n2; ++j)
-            R[j] = ints[midpoint + 1+ j];
+            Right[j] = ints[midpoint + 1+ j];
 
 
 
@@ -40,14 +40,14 @@ public class AdjacentPointsMinDistance {
         int k = start;
         while (i < n1 && j < n2)
         {
-            if (L[i] <= R[j])
+            if (Left[i] <= Right[j])
             {
-                ints[k] = L[i];
+                ints[k] = Left[i];
                 i++;
             }
             else
             {
-                ints[k] = R[j];
+                ints[k] = Right[j];
                 j++;
             }
             k++;
@@ -56,14 +56,14 @@ public class AdjacentPointsMinDistance {
 
         while (i < n1)
         {
-            ints[k] = L[i];
+            ints[k] = Left[i];
             i++;
             k++;
         }
 
         while (j < n2)
         {
-            ints[k] = R[j];
+            ints[k] = Right[j];
             j++;
             k++;
         }
