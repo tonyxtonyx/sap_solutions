@@ -9,7 +9,7 @@ public class AdjacentPointsMinDistance {
         sort(ints,0,ints.length-1);
 
         for(int i = 1; i <ints.length; i++){
-            if(difference > Math.abs(ints[i] - ints[i-1]))
+            if(difference >= Math.abs(ints[i] - ints[i-1]))
                 difference = Math.abs(ints[i] - ints[i-1]);
             if(difference == 0)
                 break;
