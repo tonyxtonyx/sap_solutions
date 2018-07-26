@@ -11,6 +11,8 @@ public class AdjacentPointsMinDistance {
         for(int i = 1; i <ints.length; i++){
             if(difference > Math.abs(ints[i] - ints[i-1]))
                 difference = Math.abs(ints[i] - ints[i-1]);
+            if(difference == 0)
+                break;
         }
 
 
